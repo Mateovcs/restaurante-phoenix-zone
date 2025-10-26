@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PHOENIX ZONE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-logo img {
+            height: 70px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo -->
+            <div class="login-logo">
+                <img src="images/logo.jpg" alt="PHOENIX ZONE">
+                <h1>PHOENIX ZONE</h1>
+            </div>
+
+            <!-- Formulario Login -->
+            <form id="loginForm" class="auth-form">
+                <h2>Iniciar Sesión</h2>
+                
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Contraseña:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Entrar</button>
+                
+                <p class="auth-link">
+                    ¿No tienes cuenta? 
+                    <a href="#" onclick="mostrarRegistro()">Regístrate aquí</a>
+                </p>
+            </form>
+
+            <!-- Formulario Registro -->
+            <form id="registroForm" class="auth-form hidden">
+                <h2>Crear Cuenta</h2>
+                
+                <div class="input-group">
+                    <label>Nombre completo:</label>
+                    <input type="text" id="regNombre" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Teléfono:</label>
+                    <input type="tel" id="regTelefono">
+                </div>
+                
+                <div class="input-group">
+                    <label>Contraseña:</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirmar Contraseña:</label>
+                    <input type="password" id="registro-confirm-password" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Registrarse</button>
+                
+                <p class="auth-link">
+                    ¿Ya tienes cuenta? 
+                    <a href="#" onclick="mostrarLogin()">Inicia sesión aquí</a>
+                </p>
+            </form>
+
+            <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+        </div>
+    </div>
+
+    <!-- JavaScript organizado -->
+    <script src="js/login.js"></script>
+</body>
+</html>

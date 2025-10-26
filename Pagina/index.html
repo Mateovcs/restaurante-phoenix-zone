@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOENIX ZONE RESTAURANT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+    <!-- Banner Promocional -->
+    <div class="promo-banner">
+        🎉 ¡Martes de Descuento! 20% off en platos principales
+        <button onclick="cerrarPromo()">X</button>
+    </div>
+
+    <!-- Navigation Mejorada -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="PHOENIX ZONE RESTAURANT" class="logo-img">
+                <span class="logo-text">PHOENIX ZONE</span>
+            </div>
+            
+            <div class="estado-restaurante">
+                <span id="estado-texto">🟢 ABIERTO</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="login.html" class="login-btn">Ingresar</a></li>
+            </ul>
+
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>BIENVENIDOS A PHOENIX ZONE</h1>
+            <p>Donde los sabores renacen del fuego</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="cta-button">Ver Menú</a>
+                <a href="#reservas" class="cta-button secondary">Reservar Mesa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Cocina al Fuego</h3>
+                    <p>Platos preparados con técnicas tradicionales</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Calidad Premium</h3>
+                    <p>Ingredientes seleccionados y frescos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Delivery Rápido</h3>
+                    <p>Entregas en menos de 30 minutos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section Mejorada -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>NUESTRO MENÚ</h2>
+            
+            <div class="menu-category">
+                <h3>🍽️ PLATOS PRINCIPALES</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Costillas BBQ Phoenix</h4>
+                            <span class="price">$22.99</span>
+                        </div>
+                        <p>Costillas asadas lentamente con nuestra salsa BBQ secreta</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(1, 'Costillas BBQ Phoenix', 22.99)">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Pollo al Fuego</h4>
+                            <span class="price">$18.99</span>
+                        </div>
+                        <p>Pollo marinado en especias y asado a la parrilla</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(2, 'Pollo al Fuego', 18.99)">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Filete Renacimiento</h4>
+                            <span class="price">$26.99</span>
+                        </div>
+                        <p>Corte premium con salsa de vino tinto</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(3, 'Filete Renacimiento', 26.99)">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🌶️ ESPECIALIDADES PICANTES</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Alitas del Fénix</h4>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <p>Alitas bañadas en salsa picante de la casa</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(4, 'Alitas del Fénix', 14.99)">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Pasta Arrabbiata</h4>
+                            <span class="price">$16.99</span>
+                        </div>
+                        <p>Pasta con salsa de tomate picante y ajo</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(5, 'Pasta Arrabbiata', 16.99)">
+                            🛒 Agregar al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reseñas -->
+    <section class="reseñas-section">
+        <div class="container">
+            <h2>OPINIONES DE CLIENTES</h2>
+            <div class="reseñas-grid">
+                <div class="reseña-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p>"Excelente comida y servicio. ¡Volveré!"</p>
+                    <span>- María G.</span>
+                </div>
+                <div class="reseña-card">
+                    <div class="estrellas">★★★★☆</div>
+                    <p>"Muy bueno el ambiente y la atención"</p>
+                    <span>- Carlos R.</span>
+                </div>
+                <div class="reseña-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p>"Las costillas son increíbles, recomendado"</p>
+                    <span>- Ana L.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section Mejorada -->
+    <section id="reservas" class="reservation-section">
+        <div class="container">
+            <h2>RESERVA TU MESA</h2>
+            <p>Garantiza tu lugar en Phoenix Zone</p>
+            
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha *</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora *</label>
+                        <input type="time" id="hora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personas">Personas *</label>
+                        <select id="personas" required>
+                            <option value="2">2 personas</option>
+                            <option value="4">4 personas</option>
+                            <option value="6">6 personas</option>
+                            <option value="8">8+ personas</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">CONFIRMAR RESERVA</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section Mejorada -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>CONTACTO</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📍 UBICACIÓN</h3>
+                    <p>Av. del Fénix 123<br>Zona Centro, Ciudad</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 TELÉFONO</h3>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🕒 HORARIO</h3>
+                    <p>Lunes a Domingo<br>12:00 - 23:00</p>
+                </div>
+                <div class="contact-item">
+                    <h3>✉️ EMAIL</h3>
+                    <p>info@phoenixzone.com</p>
+                </div>
+            </div>
+
+            <!-- Mapa Simple -->
+            <div class="mapa-container">
+                <h3>¿CÓMO LLEGAR?</h3>
+                <div class="mapa">
+                    <p>📍 Estamos en Av. del Fénix 123, Zona Centro</p>
+                    <p>🚗 Amplio estacionamiento disponible</p>
+                    <p>🚇 A 2 cuadras del metro Central</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter">
+                <h3>📧 SUSCRÍBETE A NUESTRAS OFERTAS</h3>
+                <p>Recibe promociones exclusivas y novedades</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Mejorado -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>PHOENIX ZONE</h3>
+                    <p>Donde cada comida es un renacer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#menu">Menú</a>
+                    <a href="#reservas">Reservas</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PHOENIX ZONE RESTAURANT. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrito -->
+    <div id="carrito" class="carrito">
+        <div class="carrito-header">
+            <h3>🛒 Tu Pedido</h3>
+            <button onclick="toggleCarrito()">X</button>
+        </div>
+        <div id="carrito-items" class="carrito-items"></div>
+        <div class="carrito-total">
+            Total: $<span id="carrito-total">0.00</span>
+        </div>
+        <button class="btn-pedir" onclick="realizarPedido()">Realizar Pedido</button>
+    </div>
+
+    <!-- Botones Flotantes -->
+    <div class="carrito-btn" onclick="toggleCarrito()">
+        🛒 <span id="carrito-count">0</span>
+    </div>
+
+    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20hacer%20una%20reserva%20en%20Phoenix%20Zone" 
+       class="whatsapp-btn" 
+       target="_blank">
+       📱 WhatsApp
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/reservas.js"></script>
+</body>
+</html>

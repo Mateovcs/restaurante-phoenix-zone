@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - PHOENIX ZONE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.jp" alt="PHOENIX ZONE">
+                <span> -ADMIN</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="admin.html" class="active">Panel Admin</a></li>
+                <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="admin-page">
+            <h1>🔧 Panel de Administración</h1>
+            
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-number" id="totalReservasAdmin">0</div>
+                    <div class="stat-label">Total Reservas</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="admin-stat-number" id="reservasHoy">0</div>
+                    <div class="stat-label">Reservas Hoy</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="admin-stat-number" id="totalUsuarios">0</div>
+                    <div class="stat-label">Usuarios</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="admin-stat-number" id="pedidosPendientes">0</div>
+                    <div class="stat-label">Pedidos Pendientes</div>
+                </div>
+            </div>
+
+            <div class="admin-actions-grid">
+                <button class="admin-action-btn" onclick="gestionarReservas()">
+                    📅 Gestionar Reservas
+                </button>
+                <button class="admin-action-btn" onclick="gestionarPedidos()">
+                    🛒 Gestionar Pedidos
+                </button>
+                <button class="admin-action-btn" onclick="gestionarUsuarios()">
+                    👥 Gestionar Usuarios
+                </button>
+                <button class="admin-action-btn" onclick="verEstadisticas()">
+                    📊 Ver Estadísticas
+                </button>
+                <button class="admin-action-btn" onclick="gestionarMenu()">
+                    📋 Gestionar Menú
+                </button>
+                <button class="admin-action-btn" onclick="configuracionSistema()">
+                    ⚙️ Configuración
+                </button>
+            </div>
+
+            <!-- Sección de Reservas Recientes -->
+            <div class="admin-section">
+                <h2>📅 Reservas Recientes</h2>
+                <div id="reservasRecientes" class="reservas-list">
+                    <!-- Las reservas se cargan aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - PHOENIX ZONE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logojpg" alt="PHOENIX ZONE">
+                <span>PHOENIX ZONE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html" class="active">Mi Perfil</a></li>
+                <li><a href="mis-reservas.html">Mis Reservas</a></li>
+                <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="perfil-page">
+            <h1>Mi Perfil</h1>
+            
+            <div class="perfil-info">
+                <div class="info-card">
+                    <h3>Información Personal</h3>
+                    <div class="info-item">
+                        <strong>Nombre:</strong>
+                        <span id="perfilNombre">-</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong>
+                        <span id="perfilEmail">-</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Teléfono:</strong>
+                        <span id="perfilTelefono">-</span>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <h3>Mis Estadísticas</h3>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number" id="totalReservas">0</div>
+                            <div class="stat-label">Reservas</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="totalPedidos">0</div>
+                            <div class="stat-label">Pedidos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="perfil-actions">
+                <a href="mis-reservas.html" class="btn-secondary">Ver Mis Reservas</a>
+                <a href="index.html#menu" class="btn-primary">Hacer un Pedido</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/perfil.js"></script>
+</body>
+</html>
